@@ -13,26 +13,26 @@ import ScanditBarcodeCapture
 extension ScaningView {
   @MainActor class ViewModel: ObservableObject {
     
-    
     private var captureView: DataCaptureView!
     private var overlay: BarcodeCaptureOverlay!
-    var captureDelegate: BarCodeCaptureDelegate?
+    var trackingDelegate: BarCodeTrackingDelegate?
     
     @Published var context: DataCaptureContext!
-    @Published var settings = BarcodeCaptureSettings()
+    @Published var settings = BarcodeTrackingSettings()
     @Published var symbologySelectionList: [Symbology: Bool] = [:]
-    @Published var barcodeCapture: BarcodeCapture?
+    @Published var barcodeTracking: BarcodeTracking?
     
     private var cancellables: [AnyCancellable] = []
     
-    let cameraSettings = BarcodeCapture.recommendedCameraSettings
     lazy var camera: Camera? = {
+      let cameraSettings = BarcodeTracking.recommendedCameraSettings
+      cameraSettings.preferredResolution = .uhd4k
       $0?.apply(cameraSettings)
       return $0
     }(Camera.default)
     
     init() {
-      captureDelegate?.$frameData.compactMap {$0}.sink {
+      trackingDelegate?.$frameData.compactMap {$0}.sink {
         print($0.jsonString)
       }.store(in: &cancellables)
       
@@ -62,10 +62,10 @@ extension ScaningView {
       let symbologySettings = settings.settings(for: .code39)
       symbologySettings.activeSymbolCounts = Set(7...20) as Set<NSNumber>
 
-      barcodeCapture = BarcodeCapture(context: context, settings: settings)
-      captureDelegate = BarCodeCaptureDelegate(barcodeCapture: barcodeCapture!)
+      barcodeTracking = BarcodeTracking(context: context, settings: settings)
+      trackingDelegate = BarCodeTrackingDelegate(barcodeCapture: barcodeTracking!)
 
-      barcodeCapture!.isEnabled = true
+      barcodeTracking!.isEnabled = true
       camera?.switch(toDesiredState: .on)
     }
     
@@ -82,20 +82,20 @@ extension ScaningView {
 
 extension ScaningView.ViewModel {
   
-  class BarCodeCaptureDelegate: NSObject {
+  class BarCodeTrackingDelegate: NSObject {
     @Published var frameData: FrameData?
     
-    init(barcodeCapture: BarcodeCapture) {
+    init(barcodeCapture: BarcodeTracking) {
       super.init()
       barcodeCapture.addListener(self)
     }
   }
 }
 
-extension ScaningView.ViewModel.BarCodeCaptureDelegate: BarcodeCaptureListener {
-  func barcodeCapture(
-    _ barcodeCapture: BarcodeCapture,
-    didScanIn session: BarcodeCaptureSession,
+extension ScaningView.ViewModel.BarCodeTrackingDelegate: BarcodeTrackingListener {
+  func barcodeTracking(
+    _ barcodeTracking: BarcodeTracking,
+    didUpdate session: BarcodeTrackingSession,
     frameData: FrameData
   ) {
     self.frameData = frameData
