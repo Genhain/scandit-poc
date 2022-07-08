@@ -1,0 +1,6 @@
+framework module Pods_scandit_pocTests {
+  umbrella header "Pods-scandit pocTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

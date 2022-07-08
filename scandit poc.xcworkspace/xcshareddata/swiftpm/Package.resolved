@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "fontawesome.swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/thii/FontAwesome.swift",
-      "state" : {
-        "revision" : "07883a32d49dfc7bdedbeea115067b53dfbeeb43",
-        "version" : "1.9.1"
-      }
-    },
-    {
       "identity" : "random-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GigabiteLabs/random-swift",

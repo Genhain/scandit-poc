@@ -22,11 +22,18 @@
 		08550B4B28741595005D019D /* ScanditOCR in Frameworks */ = {isa = PBXBuildFile; productRef = 08550B4A28741595005D019D /* ScanditOCR */; };
 		08550B4D28741595005D019D /* ScanditParser in Frameworks */ = {isa = PBXBuildFile; productRef = 08550B4C28741595005D019D /* ScanditParser */; };
 		08550B4F28741595005D019D /* ScanditTextCapture in Frameworks */ = {isa = PBXBuildFile; productRef = 08550B4E28741595005D019D /* ScanditTextCapture */; };
+		0883075A28781D31001BC823 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883075928781D30001BC823 /* OverlayView.swift */; };
+		088307622878264D001BC823 /* random-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 088307612878264D001BC823 /* random-swift */; };
+		088307642878329E001BC823 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088307632878329E001BC823 /* OverlayView.xib */; };
+		0883076628783E5D001BC823 /* IBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883076528783E5D001BC823 /* IBView.swift */; };
 		08E81E682877E9CF0050BD4B /* DataCaptureContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E672877E9CF0050BD4B /* DataCaptureContext+Extensions.swift */; };
 		08E81E6A2877EA6B0050BD4B /* ScanningView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E692877EA6B0050BD4B /* ScanningView-ViewModel.swift */; };
 		08E81E6C2877EB0F0050BD4B /* Symbology+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E6B2877EB0F0050BD4B /* Symbology+Extensions.swift */; };
 		08E81E6E2877EBB60050BD4B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E6D2877EBB60050BD4B /* SettingsView.swift */; };
 		08E81E702877EBEA0050BD4B /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E6F2877EBEA0050BD4B /* BarcodeScannerView.swift */; };
+		15A74BCE6C6A3B64DACE63D0 /* Pods_scandit_poc_scandit_pocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9647265E45F87C474C5F8CC6 /* Pods_scandit_poc_scandit_pocUITests.framework */; };
+		81B3353FB49031F172A9210B /* Pods_scandit_poc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636CCB280EA36E584FFC859A /* Pods_scandit_poc.framework */; };
+		FA6ED42BC9A7E97538BA8E46 /* Pods_scandit_pocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854A28AF7AA96D6561FBDA9B /* Pods_scandit_pocTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +66,23 @@
 		08550B30287414BE005D019D /* scandit pocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "scandit pocUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08550B34287414BE005D019D /* scandit_pocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scandit_pocUITests.swift; sourceTree = "<group>"; };
 		08550B36287414BE005D019D /* scandit_pocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scandit_pocUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0883075928781D30001BC823 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		088307632878329E001BC823 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		0883076528783E5D001BC823 /* IBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBView.swift; sourceTree = "<group>"; };
 		08E81E672877E9CF0050BD4B /* DataCaptureContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataCaptureContext+Extensions.swift"; sourceTree = "<group>"; };
 		08E81E692877EA6B0050BD4B /* ScanningView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanningView-ViewModel.swift"; sourceTree = "<group>"; };
 		08E81E6B2877EB0F0050BD4B /* Symbology+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symbology+Extensions.swift"; sourceTree = "<group>"; };
 		08E81E6D2877EBB60050BD4B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		08E81E6F2877EBEA0050BD4B /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		5704269743E4C2655F86948D /* Pods-scandit poc-scandit pocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scandit poc-scandit pocUITests.release.xcconfig"; path = "Target Support Files/Pods-scandit poc-scandit pocUITests/Pods-scandit poc-scandit pocUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5C0A3E7EF35C45F6149CA400 /* Pods-scandit poc-scandit pocUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scandit poc-scandit pocUITests.debug.xcconfig"; path = "Target Support Files/Pods-scandit poc-scandit pocUITests/Pods-scandit poc-scandit pocUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		636CCB280EA36E584FFC859A /* Pods_scandit_poc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scandit_poc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF684AAA49706E09F13ABDD /* Pods-scandit pocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scandit pocTests.debug.xcconfig"; path = "Target Support Files/Pods-scandit pocTests/Pods-scandit pocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		854A28AF7AA96D6561FBDA9B /* Pods_scandit_pocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scandit_pocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9647265E45F87C474C5F8CC6 /* Pods_scandit_poc_scandit_pocUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scandit_poc_scandit_pocUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A980EF1556D7F705E36425E8 /* Pods-scandit pocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scandit pocTests.release.xcconfig"; path = "Target Support Files/Pods-scandit pocTests/Pods-scandit pocTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB72428DE4009C7C69B77F31 /* Pods-scandit poc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scandit poc.debug.xcconfig"; path = "Target Support Files/Pods-scandit poc/Pods-scandit poc.debug.xcconfig"; sourceTree = "<group>"; };
+		FFEC3BAC2BBB2981CD1146F4 /* Pods-scandit poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scandit poc.release.xcconfig"; path = "Target Support Files/Pods-scandit poc/Pods-scandit poc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +92,12 @@
 			files = (
 				08550B4B28741595005D019D /* ScanditOCR in Frameworks */,
 				08550B4528741595005D019D /* ScanditBarcodeCapture in Frameworks */,
+				088307622878264D001BC823 /* random-swift in Frameworks */,
 				08550B4728741595005D019D /* ScanditCaptureCore in Frameworks */,
 				08550B4D28741595005D019D /* ScanditParser in Frameworks */,
 				08550B4928741595005D019D /* ScanditIdCapture in Frameworks */,
 				08550B4F28741595005D019D /* ScanditTextCapture in Frameworks */,
+				81B3353FB49031F172A9210B /* Pods_scandit_poc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6ED42BC9A7E97538BA8E46 /* Pods_scandit_pocTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A74BCE6C6A3B64DACE63D0 /* Pods_scandit_poc_scandit_pocUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +127,8 @@
 				08550B29287414BE005D019D /* scandit pocTests */,
 				08550B33287414BE005D019D /* scandit pocUITests */,
 				08550B12287414BA005D019D /* Products */,
+				F058A057ECAF37921F85B350 /* Pods */,
+				3082DB4B31E0426C934732AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +156,9 @@
 				08E81E6B2877EB0F0050BD4B /* Symbology+Extensions.swift */,
 				08E81E6D2877EBB60050BD4B /* SettingsView.swift */,
 				08E81E6F2877EBEA0050BD4B /* BarcodeScannerView.swift */,
+				0883075928781D30001BC823 /* OverlayView.swift */,
+				088307632878329E001BC823 /* OverlayView.xib */,
+				0883076528783E5D001BC823 /* IBView.swift */,
 			);
 			path = "scandit poc";
 			sourceTree = "<group>";
@@ -160,6 +188,29 @@
 			path = "scandit pocUITests";
 			sourceTree = "<group>";
 		};
+		3082DB4B31E0426C934732AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				636CCB280EA36E584FFC859A /* Pods_scandit_poc.framework */,
+				9647265E45F87C474C5F8CC6 /* Pods_scandit_poc_scandit_pocUITests.framework */,
+				854A28AF7AA96D6561FBDA9B /* Pods_scandit_pocTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F058A057ECAF37921F85B350 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB72428DE4009C7C69B77F31 /* Pods-scandit poc.debug.xcconfig */,
+				FFEC3BAC2BBB2981CD1146F4 /* Pods-scandit poc.release.xcconfig */,
+				5C0A3E7EF35C45F6149CA400 /* Pods-scandit poc-scandit pocUITests.debug.xcconfig */,
+				5704269743E4C2655F86948D /* Pods-scandit poc-scandit pocUITests.release.xcconfig */,
+				7DF684AAA49706E09F13ABDD /* Pods-scandit pocTests.debug.xcconfig */,
+				A980EF1556D7F705E36425E8 /* Pods-scandit pocTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08550B3A287414BE005D019D /* Build configuration list for PBXNativeTarget "scandit poc" */;
 			buildPhases = (
+				FB3236E093F413615A00E5F5 /* [CP] Check Pods Manifest.lock */,
 				08550B0D287414BA005D019D /* Sources */,
 				08550B0E287414BA005D019D /* Frameworks */,
 				08550B0F287414BA005D019D /* Resources */,
+				60BE33DC818A57F405C40C2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +236,7 @@
 				08550B4A28741595005D019D /* ScanditOCR */,
 				08550B4C28741595005D019D /* ScanditParser */,
 				08550B4E28741595005D019D /* ScanditTextCapture */,
+				088307612878264D001BC823 /* random-swift */,
 			);
 			productName = "scandit poc";
 			productReference = 08550B11287414BA005D019D /* scandit poc.app */;
@@ -192,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08550B3D287414BE005D019D /* Build configuration list for PBXNativeTarget "scandit pocTests" */;
 			buildPhases = (
+				9D3E681A83BC1CC323C44677 /* [CP] Check Pods Manifest.lock */,
 				08550B22287414BE005D019D /* Sources */,
 				08550B23287414BE005D019D /* Frameworks */,
 				08550B24287414BE005D019D /* Resources */,
@@ -210,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08550B40287414BE005D019D /* Build configuration list for PBXNativeTarget "scandit pocUITests" */;
 			buildPhases = (
+				8C39BB9527613D1EF6133D73 /* [CP] Check Pods Manifest.lock */,
 				08550B2C287414BE005D019D /* Sources */,
 				08550B2D287414BE005D019D /* Frameworks */,
 				08550B2E287414BE005D019D /* Resources */,
+				7DDA0BD3F35C87A0BD395401 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +315,7 @@
 			mainGroup = 08550B08287414BA005D019D;
 			packageReferences = (
 				08550B4328741595005D019D /* XCRemoteSwiftPackageReference "datacapture-spm" */,
+				088307602878264D001BC823 /* XCRemoteSwiftPackageReference "random-swift" */,
 			);
 			productRefGroup = 08550B12287414BA005D019D /* Products */;
 			projectDirPath = "";
@@ -276,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08550B1C287414BD005D019D /* Preview Assets.xcassets in Resources */,
+				088307642878329E001BC823 /* OverlayView.xib in Resources */,
 				08550B19287414BD005D019D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,11 +355,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60BE33DC818A57F405C40C2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scandit poc/Pods-scandit poc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scandit poc/Pods-scandit poc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-scandit poc/Pods-scandit poc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DDA0BD3F35C87A0BD395401 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scandit poc-scandit pocUITests/Pods-scandit poc-scandit pocUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scandit poc-scandit pocUITests/Pods-scandit poc-scandit pocUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-scandit poc-scandit pocUITests/Pods-scandit poc-scandit pocUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C39BB9527613D1EF6133D73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-scandit poc-scandit pocUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D3E681A83BC1CC323C44677 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-scandit pocTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB3236E093F413615A00E5F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-scandit poc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		08550B0D287414BA005D019D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0883076628783E5D001BC823 /* IBView.swift in Sources */,
 				08E81E6A2877EA6B0050BD4B /* ScanningView-ViewModel.swift in Sources */,
 				08E81E6E2877EBB60050BD4B /* SettingsView.swift in Sources */,
 				08550B1E287414BD005D019D /* Persistence.swift in Sources */,
@@ -310,6 +473,7 @@
 				08E81E702877EBEA0050BD4B /* BarcodeScannerView.swift in Sources */,
 				08550B15287414BA005D019D /* scandit_pocApp.swift in Sources */,
 				08550B21287414BE005D019D /* scandit_poc.xcdatamodeld in Sources */,
+				0883075A28781D31001BC823 /* OverlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +626,7 @@
 		};
 		08550B3B287414BE005D019D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB72428DE4009C7C69B77F31 /* Pods-scandit poc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,6 +657,7 @@
 		};
 		08550B3C287414BE005D019D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFEC3BAC2BBB2981CD1146F4 /* Pods-scandit poc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -522,6 +688,7 @@
 		};
 		08550B3E287414BE005D019D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DF684AAA49706E09F13ABDD /* Pods-scandit pocTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -542,6 +709,7 @@
 		};
 		08550B3F287414BE005D019D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A980EF1556D7F705E36425E8 /* Pods-scandit pocTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -562,6 +730,7 @@
 		};
 		08550B41287414BE005D019D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0A3E7EF35C45F6149CA400 /* Pods-scandit poc-scandit pocUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -580,6 +749,7 @@
 		};
 		08550B42287414BE005D019D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5704269743E4C2655F86948D /* Pods-scandit poc-scandit pocUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -646,6 +816,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		088307602878264D001BC823 /* XCRemoteSwiftPackageReference "random-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GigabiteLabs/random-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -678,6 +856,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08550B4328741595005D019D /* XCRemoteSwiftPackageReference "datacapture-spm" */;
 			productName = ScanditTextCapture;
+		};
+		088307612878264D001BC823 /* random-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088307602878264D001BC823 /* XCRemoteSwiftPackageReference "random-swift" */;
+			productName = "random-swift";
 		};
 /* End XCSwiftPackageProductDependency section */
 
