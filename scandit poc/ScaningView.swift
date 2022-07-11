@@ -18,7 +18,11 @@ struct ScaningView: View {
   var body: some View {
     NavigationView {
       VStack {
-        BarcodeCamera(dataCaptureContext: vm.context, barcodeTracking: vm.barcodeTracking!)
+        BarcodeCamera(
+          dataCaptureContext: vm.context,
+          barcodeTracking: vm.barcodeTracking!,
+          idsToRemove: vm.removedBarcodes ?? []
+        )
         HStack {
           ForEach(vm.selected(), id: \.description) { item in
             Text(item.description)

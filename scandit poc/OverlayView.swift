@@ -17,7 +17,6 @@ class OverlayView: IBView {
   override func initialize() {
     super.initialize()
     
-
     let name = String(describing: type(of: self))
     let nib = UINib(nibName: name, bundle: .main)
     nib.instantiate(withOwner: self, options: nil)

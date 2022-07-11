@@ -14,6 +14,7 @@ struct BarcodeCamera: UIViewRepresentable {
   let barcodeTracking: BarcodeTracking
   var handler = BasicOverlayHandler()
   var advancedHandler = AdvancedOverlayHandler()
+  let idsToRemove: [Int]
 
   func makeUIView(context: Context) -> DataCaptureView {
     let view = UIView(frame: .zero)
@@ -38,6 +39,8 @@ struct BarcodeCamera: UIViewRepresentable {
     
     let advancedOverlay = BarcodeTrackingAdvancedOverlay(barcodeTracking: barcodeTracking, view: uiView)
     advancedOverlay.delegate = advancedHandler
+    
+    advancedHandler.remove(ids: idsToRemove)
   }
 }
 
@@ -53,9 +56,19 @@ extension BarcodeCamera {
   class AdvancedOverlayHandler: NSObject, BarcodeTrackingAdvancedOverlayDelegate {
     var overlays: [Int: OverlayView] = [:]
     
+    func remove(ids: [Int]) {
+      ids.forEach {
+        overlays.removeValue(forKey: $0)
+      }
+    }
+    
     func barcodeTrackingAdvancedOverlay(_ overlay: BarcodeTrackingAdvancedOverlay, viewFor trackedBarcode: TrackedBarcode) -> UIView? {
       guard let overlay = overlays[trackedBarcode.identifier] else {
         let overlay = OverlayView()
+        
+        NSLayoutConstraint.activate([
+          overlay.widthAnchor.constraint(equalToConstant: 200)
+        ])
 
         overlays[trackedBarcode.identifier] = overlay
         

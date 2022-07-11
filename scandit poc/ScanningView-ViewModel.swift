@@ -21,6 +21,7 @@ extension ScaningView {
     @Published var settings = BarcodeTrackingSettings()
     @Published var symbologySelectionList: [Symbology: Bool] = [:]
     @Published var barcodeTracking: BarcodeTracking?
+    @Published var removedBarcodes: [Int]?
     
     private var cancellables: [AnyCancellable] = []
     
@@ -42,6 +43,10 @@ extension ScaningView {
         }
 
         self.setupBarCode()
+      }.store(in: &cancellables)
+      
+      trackingDelegate?.$removedTracedBarcodes.removeDuplicates().sink {
+        self.removedBarcodes = $0
       }.store(in: &cancellables)
       
     }
@@ -84,6 +89,7 @@ extension ScaningView.ViewModel {
   
   class BarCodeTrackingDelegate: NSObject {
     @Published var frameData: FrameData?
+    @Published var removedTracedBarcodes: [Int]?
     
     init(barcodeCapture: BarcodeTracking) {
       super.init()
@@ -98,6 +104,20 @@ extension ScaningView.ViewModel.BarCodeTrackingDelegate: BarcodeTrackingListener
     didUpdate session: BarcodeTrackingSession,
     frameData: FrameData
   ) {
-    self.frameData = frameData
+    let removedTrackedBarcodes = session.removedTrackedBarcodes
+//    let trackedBarcodes = session.trackedBarcodes.values
+    DispatchQueue.main.async {
+        if !barcodeTracking.isEnabled {
+            return
+        }
+      self.removedTracedBarcodes = removedTrackedBarcodes.map { $0.intValue }
+//        for trackedCode in trackedBarcodes {
+//            guard let code = trackedCode.barcode.data, !code.isEmpty else {
+//                return
+//            }
+//
+//            self.overlays[trackedCode.identifier]?.isHidden = !self.canShowOverlay(of: trackedCode)
+//        }
+    }
   }
 }
