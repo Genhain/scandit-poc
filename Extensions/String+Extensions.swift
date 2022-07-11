@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import random_swift
 
 extension String {
   static var random: String {

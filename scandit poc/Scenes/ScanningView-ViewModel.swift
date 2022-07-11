@@ -74,7 +74,7 @@ extension ScaningView {
       camera?.switch(toDesiredState: .on)
     }
     
-    func selected() -> [Symbology] {
+    func selectedSymbologies() -> [Symbology] {
       symbologySelectionList.reduce([Symbology](), { acc, val in
         if val.value {
           return acc + [val.key]
@@ -105,19 +105,16 @@ extension ScaningView.ViewModel.BarCodeTrackingDelegate: BarcodeTrackingListener
     frameData: FrameData
   ) {
     let removedTrackedBarcodes = session.removedTrackedBarcodes
-//    let trackedBarcodes = session.trackedBarcodes.values
+    let trackedBarcodes = session.trackedBarcodes.values
+    
     DispatchQueue.main.async {
-        if !barcodeTracking.isEnabled {
-            return
-        }
+      guard barcodeTracking.isEnabled else { return }
       self.removedTracedBarcodes = removedTrackedBarcodes.map { $0.intValue }
-//        for trackedCode in trackedBarcodes {
-//            guard let code = trackedCode.barcode.data, !code.isEmpty else {
-//                return
-//            }
-//
-//            self.overlays[trackedCode.identifier]?.isHidden = !self.canShowOverlay(of: trackedCode)
-//        }
+      for trackedCode in trackedBarcodes {
+        guard let code = trackedCode.barcode.data, !code.isEmpty else { return }
+
+        // TODO: logic to show or hide the barcode if it goes off screen
+      }
     }
   }
 }

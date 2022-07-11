@@ -24,7 +24,7 @@ struct ScaningView: View {
           idsToRemove: vm.removedBarcodes ?? []
         )
         HStack {
-          ForEach(vm.selected(), id: \.description) { item in
+          ForEach(vm.selectedSymbologies(), id: \.description) { item in
             Text(item.description)
           }
         }
