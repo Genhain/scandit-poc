@@ -42,9 +42,3 @@ class OverlayView: IBView {
   }
   
 }
-
-extension String {
-  static var random: String {
-    (1...10).map { _ in Random.word }.joined(separator: " ")
-  }
-}

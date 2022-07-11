@@ -26,6 +26,7 @@
 		088307622878264D001BC823 /* random-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 088307612878264D001BC823 /* random-swift */; };
 		088307642878329E001BC823 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088307632878329E001BC823 /* OverlayView.xib */; };
 		0883076628783E5D001BC823 /* IBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883076528783E5D001BC823 /* IBView.swift */; };
+		0883076E287BDC88001BC823 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883076D287BDC88001BC823 /* String+Extensions.swift */; };
 		08E81E682877E9CF0050BD4B /* DataCaptureContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E672877E9CF0050BD4B /* DataCaptureContext+Extensions.swift */; };
 		08E81E6A2877EA6B0050BD4B /* ScanningView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E692877EA6B0050BD4B /* ScanningView-ViewModel.swift */; };
 		08E81E6C2877EB0F0050BD4B /* Symbology+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E81E6B2877EB0F0050BD4B /* Symbology+Extensions.swift */; };
@@ -69,6 +70,7 @@
 		0883075928781D30001BC823 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		088307632878329E001BC823 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		0883076528783E5D001BC823 /* IBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBView.swift; sourceTree = "<group>"; };
+		0883076D287BDC88001BC823 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		08E81E672877E9CF0050BD4B /* DataCaptureContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataCaptureContext+Extensions.swift"; sourceTree = "<group>"; };
 		08E81E692877EA6B0050BD4B /* ScanningView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanningView-ViewModel.swift"; sourceTree = "<group>"; };
 		08E81E6B2877EB0F0050BD4B /* Symbology+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symbology+Extensions.swift"; sourceTree = "<group>"; };
@@ -124,6 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				08550B13287414BA005D019D /* scandit poc */,
+				08550B18287414BD005D019D /* Assets.xcassets */,
+				08550B1D287414BD005D019D /* Persistence.swift */,
+				08550B1F287414BE005D019D /* scandit_poc.xcdatamodeld */,
+				08830768287BDAC6001BC823 /* Extensions */,
 				08550B29287414BE005D019D /* scandit pocTests */,
 				08550B33287414BE005D019D /* scandit pocUITests */,
 				08550B12287414BA005D019D /* Products */,
@@ -146,19 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				08550B14287414BA005D019D /* scandit_pocApp.swift */,
-				08550B16287414BA005D019D /* ScaningView.swift */,
-				08E81E692877EA6B0050BD4B /* ScanningView-ViewModel.swift */,
-				08550B18287414BD005D019D /* Assets.xcassets */,
-				08550B1D287414BD005D019D /* Persistence.swift */,
-				08550B1F287414BE005D019D /* scandit_poc.xcdatamodeld */,
+				08830767287BDA61001BC823 /* Scenes */,
+				08830769287BDB02001BC823 /* Atomic */,
 				08550B1A287414BD005D019D /* Preview Content */,
-				08E81E672877E9CF0050BD4B /* DataCaptureContext+Extensions.swift */,
-				08E81E6B2877EB0F0050BD4B /* Symbology+Extensions.swift */,
-				08E81E6D2877EBB60050BD4B /* SettingsView.swift */,
-				08E81E6F2877EBEA0050BD4B /* BarcodeScannerView.swift */,
-				0883075928781D30001BC823 /* OverlayView.swift */,
-				088307632878329E001BC823 /* OverlayView.xib */,
-				0883076528783E5D001BC823 /* IBView.swift */,
 			);
 			path = "scandit poc";
 			sourceTree = "<group>";
@@ -186,6 +182,61 @@
 				08550B36287414BE005D019D /* scandit_pocUITestsLaunchTests.swift */,
 			);
 			path = "scandit pocUITests";
+			sourceTree = "<group>";
+		};
+		08830767287BDA61001BC823 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				08550B16287414BA005D019D /* ScaningView.swift */,
+				08E81E692877EA6B0050BD4B /* ScanningView-ViewModel.swift */,
+				08E81E6D2877EBB60050BD4B /* SettingsView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		08830768287BDAC6001BC823 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08E81E672877E9CF0050BD4B /* DataCaptureContext+Extensions.swift */,
+				08E81E6B2877EB0F0050BD4B /* Symbology+Extensions.swift */,
+				0883076D287BDC88001BC823 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08830769287BDB02001BC823 /* Atomic */ = {
+			isa = PBXGroup;
+			children = (
+				0883076A287BDB23001BC823 /* Atoms */,
+				0883076B287BDB87001BC823 /* Molecules */,
+				0883076C287BDB95001BC823 /* Organism */,
+			);
+			path = Atomic;
+			sourceTree = "<group>";
+		};
+		0883076A287BDB23001BC823 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				0883076528783E5D001BC823 /* IBView.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		0883076B287BDB87001BC823 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				0883075928781D30001BC823 /* OverlayView.swift */,
+				088307632878329E001BC823 /* OverlayView.xib */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		0883076C287BDB95001BC823 /* Organism */ = {
+			isa = PBXGroup;
+			children = (
+				08E81E6F2877EBEA0050BD4B /* BarcodeScannerView.swift */,
+			);
+			path = Organism;
 			sourceTree = "<group>";
 		};
 		3082DB4B31E0426C934732AC /* Frameworks */ = {
@@ -467,6 +518,7 @@
 				08E81E6A2877EA6B0050BD4B /* ScanningView-ViewModel.swift in Sources */,
 				08E81E6E2877EBB60050BD4B /* SettingsView.swift in Sources */,
 				08550B1E287414BD005D019D /* Persistence.swift in Sources */,
+				0883076E287BDC88001BC823 /* String+Extensions.swift in Sources */,
 				08550B17287414BA005D019D /* ScaningView.swift in Sources */,
 				08E81E682877E9CF0050BD4B /* DataCaptureContext+Extensions.swift in Sources */,
 				08E81E6C2877EB0F0050BD4B /* Symbology+Extensions.swift in Sources */,
